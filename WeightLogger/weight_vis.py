@@ -12,14 +12,13 @@ def call_log():
         day_status = input("Are you logging your weight for today? (y/n): ")
 
         if day_status == "y":
-            date = (date.today()).strftime("%Y-%m-%d")
-            weight = input("What is your weight today: ")
-            print(f"{date}: {weight}")
+            day = (date.today()).strftime("%Y-%m-%d")
+            weight = input("What is your weight today (lbs): ")
         else:
-            date = input("What day do you want to log [YYYY-MM-DD]: ")
+            day = input("What day do you want to log [YYYY-MM-DD]: ")
             weight = input("What was your weight on that day: ")
         
-        log(date, weight)
+        log(day, weight)
         
         print()
         
